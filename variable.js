@@ -1,0 +1,9 @@
+var a = "This is string variable"; //value containing string (series of characters) in quotes
+var b = 99; //variable containing number
+var calc = 99 + 1; //variable containing expression
+var add = calc + b; // variable containing other variable with expression
+var c = b + "1"; // expression between different types in variable
+var ill legal = "q"; // illegal naming convention for variable in JS
+var alert = 45; // illegal name as variable name can't be JS Keywords
+var getVal = "five"; //standard way of using camel case naming convention
+var 9get = 45; // illegal as variable name can't begin from number
