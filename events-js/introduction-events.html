@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events Introduction</title>
+    <script>
+        function popup(message){
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <a href="#" target="_blank" rel="noopener noreferrer" onClick="alert('Hi, User');">Say Hi!</a>
+    </p>
+    <p>
+        <a href="JavaScript:void(0)" target="_blank" rel="noopener noreferrer" onClick="alert('Hi, User');">Say Hi! With no Reload</a>
+    </p>
+    <p>
+        <a href="JavaScript:void(0)" target="_blank" rel="noopener noreferrer" onClick="var greet = 'Good Morning'; alert(greet + ' , User');">Some More JS</a>
+    </p>
+    <p>
+        <a href="JavaScript:void(0)" target="_blank" rel="noopener noreferrer" onClick="popup('Good Afternoon');">Function Greeting</a>
+    </p>
+    
+    
+</body>
+</html>
