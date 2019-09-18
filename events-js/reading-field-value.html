@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading Form Field</title>
+</head>
+<body>
+    <form action="" onsubmit="checkInput()">
+        <input type="email" name="email" id="getEmail" >
+        <input type="submit" value="Submit">
+    </form>
+</body>
+    <script>
+        function checkInput(){
+            var valInput = document.getElementById("getEmail").value;
+            if(valInput === ""){
+                alert('Email is empty');
+            }
+        }
+    </script>
+</html>
