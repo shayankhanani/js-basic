@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulate Images</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="https://ak0.picdn.net/shutterstock/videos/8408230/thumb/1.jpg" alt="Time Square" width="200px" height="100px" onclick="disappear()">
+</body>
+<script>
+    function disappear(){
+        document.getElementById('image').className = "hidden";
+    }
+</script>
+</html>
