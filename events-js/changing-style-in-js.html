@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapping Classes</title>
+    <style>
+        .first{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1em;
+        }
+        .second{
+            color: darkgray;
+            background-color:darkslategrey;
+            margin: 0 auto;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <p class="first" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam a iure minus veritatis debitis laboriosam incidunt expedita nulla eum rem.</p>
+    <button type="submit" onclick="changeStyle1()">Style 1</button>
+    <button type="submit" onclick="changeStyle2()">Style 2</button>
+    <button type="submit" onclick="changeStyle3()">Style 3</button>
+</body>
+<script>
+    function changeStyle1(){
+       var obj =  document.getElementById('para');
+       obj.className += " second";
+    }
+    function changeStyle2(){
+       var obj =  document.getElementById('para');
+       obj.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+       obj.style.fontSize = "1em";
+    }
+    function changeStyle3(){
+       var obj =  document.getElementById('para');
+       obj.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+       obj.style.fontSize = "0.5em";
+       obj.style.background = "Gray";
+       obj.style.cssFloat = "Left"
+    }
+</script>
+</html>
