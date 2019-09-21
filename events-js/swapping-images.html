@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapping Images</title>
+</head>
+<body>
+    <img src="https://static-01.daraz.pk/p/5bf142c6b2be178ebe3defc088c5b1ca.jpg_720x720q80.jpg_.webp" alt="Baby Toy" width="200px" height="200px" id="before" onmouseover="chngPic(id,'https://static-01.daraz.pk/p/4604e9445ed57c1c2bbb3a02791b2251.jpg_720x720q80.jpg_.webp')">
+</body>
+<script>
+    function chngPic(getId, getSrc){
+        document.getElementById(getId).src = getSrc;
+    }
+</script>
+</html>
