@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapping Classes</title>
+    
+</head>
+<body>
+    <p class="first" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam a iure minus veritatis debitis laboriosam incidunt expedita nulla eum rem.</p>
+    <p class="first" id="para-two">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam a iure minus veritatis debitis laboriosam incidunt expedita nulla eum rem.</p>
+    <p class="first" id="para-three">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam a iure minus veritatis debitis laboriosam incidunt expedita nulla eum rem.</p>
+    
+    <button type="submit" onclick="changeStyle1()">Style 1</button>
+</body>
+<script>
+    function changeStyle1(){
+       var obj =  document.getElementsByTagName('p');
+       obj[0].innerHTML = "Gone!!";
+       obj[0].style.fontFamily = "Verdana, Geneva, sans-serif";
+       obj[1].style.color = "Red";
+       obj[2].style.fontSize = "18px";
+    }
+</script>
+</html>
