@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapping Classes</title>
+    <style>
+        .first{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1em;
+        }
+        .second{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <a href="www.google.com" id="anchor"></a>
+    <p class="first" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam a iure minus veritatis debitis laboriosam incidunt expedita nulla eum rem.</p>
+    <button type="submit" onclick="changeStyle()">Submit</button>
+</body>
+<script>
+    function changeStyle(){
+       var obj =  document.getElementById('para');
+       obj.className = "second";
+       var objLink = document.getElementById('anchor');
+       alert(objLink.href);
+    }
+</script>
+</html>
