@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counting Elements Via DOM</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rem recusandae repudiandae fugit praesentium necessitatibus totam. Alias, laboriosam minus! Doloremque natus blanditiis molestias magnam quisquam a est minima voluptatum iste.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda autem neque iste dolor placeat accusantium impedit alias voluptas similique?</p>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li></li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li></li>
+        <li>Lorem, ipsum dolor.</li>
+    </ul>
+    <button type="submit" onclick="addComingSoon()">Submit</button>
+</body>
+<script>
+    var getnoP = document.getElementsByTagName('p').length;
+    alert(getnoP);
+    function addComingSoon(){
+        var listofLI = document.getElementsByTagName('li');
+        for(var i = 0; i <= listofLI.length; i++)
+        {        
+            if(listofLI[i].innerHTML === ""){
+                listofLI[i].innerHTML = "Coming Soon";
+            }
+        }
+    }
+    
+</script>
+</html>
