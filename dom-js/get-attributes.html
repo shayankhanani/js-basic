@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating Attributes and Values</title>
+    <style>
+        .orange{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            padding: 10px;
+        }
+        .sky{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="orange"></div> <br/> <button type="submit" onclick="change()">Change It</button>
+    <div>
+        <img src="https://solarsystem.nasa.gov/system/basic_html_elements/x11561_Sun.png.pagespeed.ic.0igPUXQBpc.png" alt="sun" width="200px" height="200px"/>
+    </div>
+    <button type="submit" onclick="changeImage()">Change Image</button>
+</body>
+<script>
+    function change(){
+        var target = document.getElementsByClassName('orange');
+        target[0].setAttribute("class","sky");
+    }
+    function changeImage(){
+        var targetSrc = document.getElementsByTagName('img');
+        if(targetSrc[0].hasAttribute("src")){
+            
+            targetSrc[0].setAttribute("src","https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Sun-and-Moon-PNG/Transparent_Moon_PNG_Clipart_Picture.png?m=1507172110");
+        }
+    }
+</script>
+</html>
