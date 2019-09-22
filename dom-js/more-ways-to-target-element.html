@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first"><p id="second">Lorem ipsum dolor sit amet.</p>
+        <p id="first">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore!</p>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dignissimos maiores alias praesentium, quam laborum? Autem aspernatur illum saepe harum.</p>
+    </div>
+    <div id="second">
+        <ul><li>Apple</li><li>Banana</li><li>Pineapple</li><li>Peach</li></ul>
+    </div>
+    <div id="third"><button type="submit">Submit</button></div>
+</body>
+    <script>
+        var targetNode = document.getElementsByTagName('body');
+        alert(targetNode[0].childNodes[1].firstChild.innerHTML);
+        targetNode = document.getElementsByTagName('ul');
+        alert(targetNode[0].lastChild.innerHTML);
+        targetNode = document.getElementsByTagName('li');
+        alert(targetNode[1].nextSibling.innerHTML + " " +targetNode[1].previousSibling.innerHTML);
+        alert(targetNode[1].nodeValue);
+        targetNode = document.getElementsByTagName('button');
+        alert(targetNode[0].parentElement.nodeName);
+    </script>
+</html>
