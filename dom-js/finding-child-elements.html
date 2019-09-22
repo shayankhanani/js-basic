@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Child Element</title>
+</head>
+<body>
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse.</p>
+    </div>
+</body>
+<script>
+    //getting element by tag name
+    var p = document.getElementsByTagName("p");
+    var content = p[4].innerHTML;
+    alert(content);
+
+    //getting element by using heirarchy
+    var d = document.getElementById("ny");
+    p = d.getElementsByTagName('p');
+    content = p[1].innerHTML;
+    alert("Altenative Way: "+ content);
+
+    //getting element by using childNodes - DOM
+    d = document.getElementById("ny");
+    var nType = d.childNodes[1].nodeType;
+    var nName = d.childNodes[1].nodeName;
+    alert("JS Treating Whitesapce as Node of Type: " + nType + " i.e. "+ nName);
+    p = d.childNodes[3];
+    content = p.innerHTML;
+    alert("By using childNodes: " + content);
+    
+</script>
+</html>
