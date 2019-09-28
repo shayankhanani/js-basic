@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Control</title>
+</head>
+<body>
+    <button type="submit" onclick="testpopUp()">Bang!</button>
+    
+</body>
+<script>
+    function testpopUp(){
+        var popUP = window.open("","test","width=10px,height=10px;");
+        if (popUP === undefined || popUP === null){
+            alert("Disable your Pop up blocker");
+        }
+        popUP.close()
+    }
+    
+</script>
+</html>
