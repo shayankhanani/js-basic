@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Control</title>
+</head>
+<body>
+    <button type="submit" onclick="popUp()">Bang!</button>
+    <button type="submit" onclick="popUpWebPage()">Bang To Another Web!</button>
+</body>
+<script>
+    function popUp(){
+        var popUP = window.open();
+        var text = "This is controversial";
+        popUP.document.write(text); 
+    }
+    function popUpWebPage(){
+        var popUP = window.open();
+        popUP.location.assign("http://www.animals.com/capuchin.html"); 
+        //popUP.location.href = http://www.animals.com/capuchin.html";
+        //popUP = windows.open("http://www.animals.com/capuchin.html")
+    }
+</script>
+</html>
