@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Control</title>
+</head>
+<body>
+   <button type="submit" onclick="go()">Click Me</button>
+   <button type="submit" onclick="goBack()">Click Me To Go Back</button>
+   <button type="submit" onclick="goForward()">Click Me To Go Forward</button>
+   <button type="submit" onclick="jumpBack2()">Click Me To Go Back 2 Steps</button>
+   <button type="submit" onclick="jumpForward2()">Click Me To Go Forward 2 Steps</button>
+   <a href="getting-setting-url-two.html">Bye!</a>
+</body>
+    <script>
+        function go(){
+           location.assign("https://www.google.com");
+        }
+        function goBack(){
+           history.back();
+        }
+        function goForward(){
+           history.forward();
+        }
+        function jumpBack2(){
+            history.go(-2);
+        }
+        function jumpForward2(){
+            history.go(2);
+        }
+        
+    </script>
+</html>
