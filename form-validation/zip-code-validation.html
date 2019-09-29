@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate();">
+        <label for="zip">Zip Code: </label>
+        <input type="text" name="zip" id="zip">
+        <input type="submit" value="submit">
+    </form>
+</body>
+    <script>
+        function validate(){
+            var e = document.getElementById('zip');
+            if(e.value.length !== 5){
+                alert("Zip Code should be of 5 digits");
+                e.focus();
+                return false;
+            }
+            for(var i = 0; i< e.value.length; i++){
+                var checkChar = parseInt(e.value[i]);
+                if(isNaN(checkChar)){
+                    alert("Zip Code contains digits only");
+                    e.focus();
+                    return false;
+                }
+            }
+        }
+    </script>
+</html>
