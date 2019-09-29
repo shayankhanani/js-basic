@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return validation('states');">
+        <select name="states" id="states">
+            <option value="">Select your state</option>
+            <option value="Sindh">Sindh</option>
+            <option value="Punjab">Punjab</option>
+            <option value="KPK">KPK</option>
+            <option value="Balochistan">Balochistan</option>
+            <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+            <option value="Azad Kashmir">Azad Kashmir</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+    <script>
+        function validation(id){
+            var e = document.getElementById(id);
+            if(e.selectedIndex === 0){
+                alert("Please select your state");
+            }
+            e.focus();
+            return false;
+        }
+    </script>
+</html>
