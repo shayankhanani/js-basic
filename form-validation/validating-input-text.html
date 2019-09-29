@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Text Field Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <input type="text" name="lastName" id="lastName">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+    <script>
+        function validate(){
+            var e = document.getElementById('lastName');
+            if(e.value.length === 0){
+                alert("Please enter your last name");
+                e.focus();
+                return false;
+            }
+        }
+    </script>
+</html>
