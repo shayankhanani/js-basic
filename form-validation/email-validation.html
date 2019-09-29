@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate();">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email">
+            <input type="submit" value="submit">
+    </form>
+</body>
+    <script>
+        function validate(){
+            var okFlag = true;
+            var e = document.getElementById('email').value;
+            var i = e.indexOf("@");
+            if(e.indexOf(" ") !== -1){
+                alert("Email should not contain spaces");
+                e.focus();
+                okFlag = false;
+            }
+            if(i < 1 || i > e.length - 5){
+                alert("Too Short");
+                okFlag = false;
+            }
+            if(e.indexOf(".") - i < 2 || e.indexOf(".") > e.length - 3){
+                alert("Invalid Domain");
+                okFlag = false;
+            }
+            if(okFlag == false){
+                alert("Email address is invalid");
+                e.focus();
+                return false;
+            }
+        }
+    </script>
+</html>
