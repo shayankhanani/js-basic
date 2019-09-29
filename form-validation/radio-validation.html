@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radio Button Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return validation();">
+        <label for="gender">Gender</label>
+        <input type="radio" name="r1" id="gender">Male &nbsp;&nbsp;
+        <input type="radio" name="r1" id="gender">Female &nbsp;&nbsp;
+        <input type="radio" name="r1" id="gender">Other &nbsp;&nbsp;
+        <input type="submit" value="Submit">
+    </form>
+</body>
+    <script>
+        function validation(){
+            var e = document.getElementsByName('r1');
+            for(var i = 0; i < e.length; i++){
+                if(e[i].checked){
+                    return true;
+                }
+            }
+            alert("Please select your gender");
+            return false;
+        }
+    </script>
+</html>
